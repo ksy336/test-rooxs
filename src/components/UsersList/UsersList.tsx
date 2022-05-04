@@ -1,27 +1,26 @@
 import React from "react";
 import SortUsers from "./SortUsers/SortUsers";
+import UsersInfo from "./UsersInfo/UsersInfo";
 import "./UsersList.scss";
-
-export interface IUser {
-  name: string;
-  city: string;
-  company: string;
-}
+import {useSelector} from "react-redux";
+import {RootState} from "../../store";
+import LoadingSpinner from "../../UI/Spinner/LoadingSpinner";
 
 const UsersList = () => {
+    const loading = useSelector((state: RootState) => state.users.loading);
     return (
         <>
-            <main className="main">
+            {loading && <LoadingSpinner />}
+            {!loading && <main className="main">
                 <div className="wrapper main__wrapper">
-                    <SortUsers />
+                    <SortUsers/>
                     <section className="main__content">
                         <h3 className="main__text">Список пользователей</h3>
-                        <div className="users-info layout-2-column">
-
-                        </div>
+                        <UsersInfo/>
                     </section>
                 </div>
             </main>
+            }
         </>
     )
 }
