@@ -14,8 +14,13 @@ export interface  IUsers {
     address: any
     company: string
 }
+
 export interface UserState {
     loading: boolean,
     error: null | string,
-    users: IUserData[]
+    users: IUserData[],
+    isSorted: boolean,
+    sortType: string,
+    filteredList: [],
+    filteredUsersByCompany: []
 }

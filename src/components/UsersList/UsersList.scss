@@ -12,8 +12,10 @@
   align-self: end;
 }
 .main__content {
+  flex-grow: 1;
   padding-left: 34px;
   padding-top: 19px;
+  padding-right: 62px;
 }
 .main__text {
   margin-bottom: 15px;

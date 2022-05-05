@@ -5,17 +5,22 @@
   display: flex;
   margin-bottom: 15px;
 }
+.layout-2-column >* {
+  flex-basis: 45%;
+}
 .details-info {
   align-self: flex-end;
   margin-left: 100px;
 }
-.details-info a {
+.details-link {
   text-decoration: none;
   color: #4B51EF;
   font-style: normal;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.4rem;
+  display: flex;
+  justify-content: flex-end;
 }
 .layout-2-column {
 

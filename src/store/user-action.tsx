@@ -1,4 +1,4 @@
-import {getErrorStatus, getUsers, loadUsers} from "./user-slice";
+import {getErrorStatus, getUsers, loadUsers, sortUsers, getSorting} from "./user-slice";
 
 const fetchUserData = () => {
     return async(dispatch: any) => {
@@ -15,6 +15,8 @@ const fetchUserData = () => {
         try {
             const list = await fetchData();
             console.log(list);
+            dispatch(sortUsers(false));
+            dispatch(getSorting("unsorted"));
             dispatch(getUsers(list));
         } catch(error) {
             dispatch(getErrorStatus(error))
