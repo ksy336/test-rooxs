@@ -5,10 +5,10 @@ const initialState: UserState = {
     loading: false,
     error: null,
     users: [],
-    isSorted: false,
     sortType: "unsorted",
     filteredList: [],
-    filteredUsersByCompany: []
+    filteredUsersByCompany: [],
+    userProfile: []
 }
 
 const userSlice = createSlice({
@@ -24,9 +24,6 @@ const userSlice = createSlice({
         getUsers(state, action) {
             state.users = action.payload;
         },
-        sortUsers(state, action) {
-            state.isSorted = action.payload;
-        },
         getSorting(state, action) {
             state.sortType = action.payload;
         },
@@ -36,8 +33,11 @@ const userSlice = createSlice({
         filterUsersByCompany(state, action) {
             state.filteredUsersByCompany = action.payload;
         },
+        getUserProfile(state, action) {
+            state.userProfile = action.payload;
+        }
     }
 })
-export const {loadUsers, getErrorStatus, getUsers, sortUsers, getSorting, filterList, filterUsersByCompany} = userSlice.actions;
+export const {loadUsers, getErrorStatus, getUsers, getSorting, filterList, filterUsersByCompany, getUserProfile} = userSlice.actions;
 
 export default userSlice;

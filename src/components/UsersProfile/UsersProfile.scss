@@ -1,0 +1,48 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.main__wrapper {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .main__wrapper {
+    flex-direction: column;
+    padding: 25px;
+  }
+}
+
+
+.profile__content {
+  padding-top: 19px;
+  padding-left: 36px;
+}
+
+.user__profile {
+  display: flex;
+
+}
+.user-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #000000;
+  margin: 0;
+  flex-basis: 80%;
+  align-self: center;
+}
+.btn__edit {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #FFFFFF;
+  padding: 6px 11px;
+  width: 116px;
+  height: 27px;
+}
+.buttons-profile {
+  flex-basis: 20%;
+}

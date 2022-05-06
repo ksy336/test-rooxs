@@ -11,16 +11,29 @@ export interface IUserData {
 }
 export interface  IUsers {
     name: string,
-    address: any
-    company: string
+    address: any,
+    company: string,
+    id: number
 }
 
 export interface UserState {
     loading: boolean,
     error: null | string,
     users: IUserData[],
-    isSorted: boolean,
     sortType: string,
     filteredList: [],
-    filteredUsersByCompany: []
+    filteredUsersByCompany: [],
+    userProfile: []
+}
+export interface FormState {
+    isFormValid: boolean,
+    firstName: string,
+    userName: string,
+    email: string,
+    street: string,
+    city: string,
+    zipCode: number | string,
+    phone: number | string,
+    website: string,
+    comment?: string
 }
